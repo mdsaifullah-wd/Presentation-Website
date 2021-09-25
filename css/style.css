@@ -1,0 +1,122 @@
+/* Variables */
+:root {
+    --primary-color: #f4f4f4;
+    --secondary-color: #333;
+    /* Page Background */
+    --page-1-color: steelblue;
+    --page-2-color: tan;
+    --page-3-color: teal;
+    --page-4-color: slateblue;
+    /* Animation */
+    --animation-speed: 1s;
+
+}
+
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Basic Properties */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    overflow: hidden;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Utility Classes */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-dark {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.page {
+    padding: 0 4rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Main CSS */
+.page h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.page p {
+    font-size: 1.3rem;
+}
+#page-1 {
+    background-color: var(--page-1-color);
+}
+#page-2 {
+    background-color: var(--page-2-color);
+}
+#page-3 {
+    background-color: var(--page-3-color);
+}
+#page-4 {
+    background-color: var(--page-4-color);
+}
+
+
+/* Page 1 Animation */
+#page-1 h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animation-speed) forwards ease-in;
+}
+
+#page-1 p {
+    animation: text var(--animation-speed) forwards ease-in 0.5s;
+    transform: translateX(-1800px);
+}
+
+/* Keyframes */
+@keyframes heading {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes text {
+    to {
+        transform: translateX(0);
+    }
+}
